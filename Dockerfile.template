@@ -1,0 +1,10 @@
+FROM resin/armv7hf-systemd:latest
+
+ENV INITSYSTEM=on
+
+RUN apt-get update && apt-get -y install xloadimage xorg && rm -rf /var/lib/apt/*
+
+WORKDIR /usr/src/app
+COPY . ./
+
+CMD /usr/src/app/go.sh
