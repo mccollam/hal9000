@@ -14,7 +14,7 @@ if [ ! -c /dev/fb1 ]; then
   mknod /dev/fb1 c $(cat /sys/class/graphics/fb1/dev | tr ':' ' ')
 fi
 
-echo true > ~/.xinitrc
+echo cat > ~/.xinitrc
 chmod a+x ~/.xinitrc
 
 FRAMEBUFFER=/dev/fb1 xinit &
