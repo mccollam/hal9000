@@ -3,7 +3,7 @@ FROM resin/armv7hf-systemd:latest
 ENV INITSYSTEM=on
 
 RUN apt-get update \
-	&& apt-get -y install xserver-common xserver-xorg-core xserver-xorg-input-all
+	&& apt-get -y install xserver-common xserver-xorg-core xserver-xorg-input-all \
 	&& apt-get -y install xloadimage xorg kmod \
 	&& rm -rf /var/lib/apt/*
 
