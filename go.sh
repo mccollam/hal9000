@@ -17,6 +17,11 @@ fi
 FRAMEBUFFER=/dev/fb1 X &
 sleep 2
 
+# Disable screen blanking
+DISPLAY=:0 xset s off
+DISPLAY=:0 xset dpms 0 0 0
+DISPLAY=:0 xset -dpms
+
 images=(/usr/src/app/images_small/*)
 
 while true
