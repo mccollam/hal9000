@@ -15,6 +15,7 @@ if [ ! -c /dev/fb1 ]; then
 fi
 
 echo true > ~/.xinitrc
+chmod a+x ~/.xinitrc
 
 FRAMEBUFFER=/dev/fb1 xinit &
 sleep 2
