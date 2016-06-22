@@ -14,7 +14,7 @@ if [ ! -c /dev/fb1 ]; then
   mknod /dev/fb1 c $(cat /sys/class/graphics/fb1/dev | tr ':' ' ')
 fi
 
-FRAMEBUFFER=/dev/fb1 X &
+FRAMEBUFFER=/dev/fb1 xinit &
 sleep 2
 
 # Disable screen blanking
