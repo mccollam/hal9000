@@ -21,6 +21,7 @@ sleep 2
 DISPLAY=:0 xset s off
 DISPLAY=:0 xset dpms 0 0 0
 DISPLAY=:0 xset -dpms
+DISPLAY=:0 xset b off
 
 images=(/usr/src/app/images_small/*)
 
