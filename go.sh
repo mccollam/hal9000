@@ -21,7 +21,8 @@ images=(/usr/src/app/images_small/*)
 
 while true
 do
-	image=${images[$RANDOM % ${#images[@]} ]}
+	#image=${images[$RANDOM % ${#images[@]} ]}
+	image=eye.png
 	DISPLAY=:0 /usr/bin/xloadimage -fullscreen -onroot -center "$image"
 	timeout=$[($RANDOM % $randtimeout) + $mintimeout]
 	sleep $timeout
